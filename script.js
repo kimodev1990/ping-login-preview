@@ -4,7 +4,7 @@ const errorLabel = document.querySelector(".container__label");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  if (inputEmail.value === "" || validateEmail(inputEmail.value) === true) {
+  if (validateEmail(inputEmail.value.trim()) === true) {
     showError();
   } else {
     hideError();
